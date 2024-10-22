@@ -2,3 +2,41 @@
 
 ![Node.js Badge](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
 ![Express.js Badge](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
+![VS Code Badge](https://img.shields.io/badge/Made%20with-VS%20Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white)
+
+## Descrição
+
+/\*\*
+
+- Esta é uma API Node.js simples que fornece endpoints para realizar operações CRUD (Create, Read, Update, Delete).
+-
+- Endpoints disponíveis:
+-
+- - `GET /items`: Retorna uma lista de todos os itens.
+- - `GET /items/:id`: Retorna um item específico pelo ID.
+- - `POST /items`: Cria um novo item.
+- - `PUT /items/:id`: Atualiza um item existente pelo ID.
+- - `DELETE /items/:id`: Remove um item específico pelo ID.
+-
+- Esta API utiliza um banco de dados em memória para armazenar os itens.
+-
+- @module SimpleAPI
+  \*/
+
+## Instalação
+
+```bash
+# Clone o repositório
+git clone https://github.com/seu-usuario/my-bank-api.git
+
+# Navegue até o diretório do projeto
+cd my-bank-api
+
+# Instale as dependências
+npm install
+
+# Inicie o servidor
+npm start
+```
+
+O servidor estará rodando em `http://localhost:3000`.
