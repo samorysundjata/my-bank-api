@@ -27,7 +27,7 @@
 
 ```bash
 # Clone o repositório
-git clone https://github.com/seu-usuario/my-bank-api.git
+git clone https://github.com/samorysundjata/my-bank-api
 
 # Navegue até o diretório do projeto
 cd my-bank-api
@@ -36,7 +36,7 @@ cd my-bank-api
 npm install
 
 # Inicie o servidor
-npm start
+nodemon index.js
 ```
 
 O servidor estará rodando em `http://localhost:3000`.
