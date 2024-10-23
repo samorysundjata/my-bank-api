@@ -1,5 +1,5 @@
 {
-  "nextId": 4,
+  "nextId": 5,
   "accounts": [
     {
       "id": 1,
@@ -12,9 +12,9 @@
       "balance": 19948849
     },
     {
-      "id": 3,
-      "name": "Vitor Gabriel Medeiros Santos",
-      "balance": 12403807
+      "id": 4,
+      "name": "Enzo Gabriel Barbosa Fernandes",
+      "balance": 10815652
     }
   ]
 }
