@@ -3,6 +3,7 @@
 ![Node.js Badge](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
 ![Express.js Badge](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
 ![VS Code Badge](https://img.shields.io/badge/Made%20with-VS%20Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white)
+![JavaScript Badge](https://img.shields.io/badge/JavaScript-ES6-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
 ## Descrição
 
@@ -39,4 +40,4 @@ npm install
 nodemon index.js
 ```
 
-O servidor estará rodando em `http://localhost:3000`.
+O servidor estará rodando de boas em `http://localhost:3000`.
