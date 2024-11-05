@@ -1,25 +1,10 @@
 {
-  "nextId": 5,
+  "nextId": 2,
   "accounts": [
     {
       "id": 1,
-      "name": "Enzo Gabriel Castro Martins",
-      "balance": 14456580
-    },
-    {
-      "id": 2,
-      "name": "Enzo Gabriel Marques Santana",
-      "balance": 18628695
-    },
-    {
-      "id": 3,
-      "name": "João Pedro Freitas Castro",
-      "balance": 13010642
-    },
-    {
-      "id": 4,
-      "name": "Matheus Henrique Fernandes Moreira",
-      "balance": 14408539
+      "name": "Lucas Gabriel Pereira Moreira",
+      "balance": 19217506
     }
   ]
 }

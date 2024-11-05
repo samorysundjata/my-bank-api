@@ -1,3 +1,4 @@
+import { log } from "console";
 import express from "express";
 import { promises as fs } from "fs";
 
@@ -92,7 +93,8 @@ router.patch("/updateBalance", async (req, res, next) => {
 });
 
 router.use((err, req, res, next) => {
-  global.logger.error("${req.method} ${req.baseUrl} -  ${err.message}");
+  logger.error(`${req.method} ${req.baseUrl} -  ${err.message}`);
+  // logger.error(`${err.message}`);
   res.status(400).send({ error: err.message });
 });
 
