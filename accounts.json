@@ -1,10 +1,60 @@
 {
-  "nextId": 2,
+  "nextId": 12,
   "accounts": [
     {
       "id": 1,
       "name": "Lucas Gabriel Pereira Moreira",
       "balance": 19217506
+    },
+    {
+      "id": 2,
+      "name": "Julio César Garcia Monteiro",
+      "balance": 12797539
+    },
+    {
+      "id": 3,
+      "name": "João Lucas Pereira Soares",
+      "balance": 11631045
+    },
+    {
+      "id": 4,
+      "name": "Maria Valentina Barros",
+      "balance": 36641264246
+    },
+    {
+      "id": 5,
+      "name": "João Vitor Castro Barros",
+      "balance": 0
+    },
+    {
+      "id": 6,
+      "name": "Luiz Gustavo Teixeira Moreira",
+      "balance": 0
+    },
+    {
+      "id": 7,
+      "name": "Luiz Gustavo Freitas Borges",
+      "balance": 0
+    },
+    {
+      "id": 8,
+      "name": "Luiz Felipe Martins Carvalho",
+      "balance": 16277113
+    },
+    {
+      "id": 9,
+      "name": "Luiz Otávio Martins Almeida",
+      "balance": 11197541
+    },
+    {
+      "id": 10,
+      "name": "Luiz Gustavo Almeida Melo",
+      "balance": 16711916
+    },
+    {
+      "id": 11,
+      "name": "Carlos Eduardo Andrade Martins",
+      "balance": 15069811
     }
   ]
 }
