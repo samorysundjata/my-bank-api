@@ -120,7 +120,6 @@ router.patch("/updateBalance", async (req, res, next) => {
 
 router.use((err, req, res, next) => {
   logger.error(`${req.method} ${req.baseUrl} -  ${err.message}`);
-  // logger.error(`${err.message}`);
   res.status(400).send({ error: err.message });
 });
 
