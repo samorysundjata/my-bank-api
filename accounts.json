@@ -1,5 +1,5 @@
 {
-  "nextId": 13,
+  "nextId": 15,
   "accounts": [
     {
       "id": 1,
@@ -60,6 +60,16 @@
       "id": 12,
       "name": "Ana Laura Andrade",
       "balance": 88458783258
+    },
+    {
+      "id": 13,
+      "name": "João Miguel Gomes Rocha",
+      "balance": 13863893
+    },
+    {
+      "id": 14,
+      "name": "Luiz Henrique Dias Duarte",
+      "balance": 13963256
     }
   ]
 }
