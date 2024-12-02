@@ -22,9 +22,7 @@ async function createAccount(req, res, next) {
 
 async function getAccounts(req, res, next) {
   try {
-    const data = JSON.parse(await readFile(filename));
-    delete data.nextId;
-    res.send(data);
+    res.send(await AccountService.getAccounts());
     logger.info("GET /account");
   } catch (err) {
     next(err);
@@ -33,11 +31,7 @@ async function getAccounts(req, res, next) {
 
 async function getAccount(req, res, next) {
   try {
-    const data = JSON.parse(await readFile(filename));
-    const account = data.accounts.find(
-      (account) => account.id === parseInt(req.params.id)
-    );
-    res.send(account);
+    res.send(await AccountService.getAccount(req.params.id));
     logger.info("GET /account/:id");
   } catch (err) {
     next(err);
@@ -46,11 +40,7 @@ async function getAccount(req, res, next) {
 
 async function deleteAccount(req, res, next) {
   try {
-    const data = JSON.parse(await readFile(filename));
-    data.accounts = data.accounts.filter(
-      (account) => account.id !== parseInt(req.params.id)
-    );
-    await writeFile(filename, JSON.stringify(data, null, 2));
+    await AccountService.deleteAccount(req.params.id);
     res.end();
     logger.info("DELETE /account/:id - ${req.params.id}");
   } catch (err) {
@@ -65,19 +55,7 @@ async function updateAccount(req, res, next) {
     if (!account.id || !account.name || account.balance == null) {
       throw new Error("Id, Name e Balance são obrigatórios");
     }
-
-    const data = JSON.parse(await readFile(global.filename));
-    const index = data.accounts.findIndex((a) => a.id === account.id);
-
-    if (index === -1) {
-      throw new Error("Registro não encontrado");
-    }
-
-    data.accounts[index].name = account.name;
-    data.accounts[index].balance = account.balance;
-    await writeFile(global.filename, JSON.stringify(data, null, 2));
-
-    res.send(account);
+    res.send(await AccountService.updateAccount(account));
     logger.info(`PUT /account - ${JSON.stringify(account)}`);
   } catch (err) {
     next(err);
