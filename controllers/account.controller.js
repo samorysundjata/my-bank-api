@@ -65,21 +65,12 @@ async function updateAccount(req, res, next) {
 async function updateBalance(req, res, next) {
   try {
     const account = req.body;
-    const data = JSON.parse(await readFile(global.filename));
-    const index = data.accounts.findIndex((a) => a.id === account.id);
 
     if (!account.id || account.balance == null) {
       throw new Error("Id e Balance são obrigatórios");
     }
 
-    if (index === -1) {
-      throw new Error("Registro não encontrado");
-    }
-
-    data.accounts[index].balance = account.balance;
-    await writeFile(global.filename, JSON.stringify(data, null, 2));
-
-    res.send(data.accounts[index]);
+    res.send(await AccountService.updateBalance(account));
     logger.info(`PATCH /account - ${JSON.stringify(account)}`);
   } catch (err) {
     next(err);
