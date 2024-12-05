@@ -1,10 +1,10 @@
 {
-  "nextId": 20,
+  "nextId": 21,
   "accounts": [
     {
       "id": 1,
       "name": "Lucas Gabriel Pereira Moreira",
-      "balance": 19217506
+      "balance": 63585124550
     },
     {
       "id": 2,
@@ -19,7 +19,10 @@
     {
       "id": 4,
       "name": "Maria Valentina Barros",
-      "balance": 37288621774
+      "balance": {
+        "id": 4,
+        "balance": 67450713802
+      }
     },
     {
       "id": 5,
@@ -58,8 +61,8 @@
     },
     {
       "id": 12,
-      "name": "Ana Beatriz Duarte",
-      "balance": 74115018240
+      "name": "Maria Flor Garcia",
+      "balance": 27281518730
     },
     {
       "id": 13,
@@ -80,6 +83,11 @@
       "id": 17,
       "name": "João Guilherme Garcia Soares",
       "balance": 15020716
+    },
+    {
+      "id": 20,
+      "name": "João Gabriel Oliveira Moura",
+      "balance": 16692605
     }
   ]
 }
