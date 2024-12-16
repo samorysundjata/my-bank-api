@@ -22,7 +22,6 @@ async function updateBalance(account) {
   const acc = await AccountRepository.getAccount(account.id);
   acc.balance = account.balance;
   return await AccountRepository.updateAccount(acc);
-  // return data.accounts[index];
 }
 
 export default {

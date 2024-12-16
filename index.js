@@ -5,6 +5,8 @@ import { promises as fs } from "fs";
 import cors from "cors";
 import swaggerUi from "swagger-ui-express";
 import { swaggerDocument } from "./doc.js";
+import { buildSchema } from "graphql";
+import { graphqlHTTP } from "express-graphql";
 
 const { readFile, writeFile } = fs;
 const { combine, timestamp, label, printf } = winston.format;
@@ -22,12 +24,35 @@ global.logger = winston.createLogger({
   format: combine(label({ label: "my-bank-api" }), timestamp(), myFormat),
 });
 
+const schema = buildSchema(`	
+  type Account {
+    id: Int,
+    name: String,
+    balance: Float
+    }
+  
+  type Query {
+    accounts: [Account]
+    account(id: Int): Account
+  }
+`);
+
 const app = express();
 app.use(express.json());
 app.use(cors());
 app.use(express.static("public"));
 app.use("/doc", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 app.use("/account", accountsRouter);
+
+app.use(
+  "/graphql",
+  graphqlHTTP({
+    schema: schema,
+    rootValue: null,
+    graphiql: true,
+  })
+);
+
 app.listen(3000, async () => {
   try {
     await readFile(filename);

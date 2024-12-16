@@ -13,11 +13,12 @@
 -
 - Endpoints disponíveis:
 -
-- - `GET /items`: Retorna uma lista de todos os itens.
-- - `GET /items/:id`: Retorna um item específico pelo ID.
-- - `POST /items`: Cria um novo item.
-- - `PUT /items/:id`: Atualiza um item existente pelo ID.
-- - `DELETE /items/:id`: Remove um item específico pelo ID.
+- `GET /accounts`: Retorna uma lista de todas as contas.
+- `GET /accounts/:id`: Retorna uma conta específica pelo ID.
+- `POST /accounts`: Cria uma nova conta.
+- `PUT /accounts/:id`: Atualiza uma conta existente pelo ID.
+- `DELETE /accounts/:id`: Remove uma conta específica pelo ID.
+- `PATCH /accounts/:id/balance`: Atualiza o saldo de uma conta específica pelo ID.
 -
 - Esta API utiliza um banco de dados em memória para armazenar os itens.
 -
