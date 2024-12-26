@@ -7,6 +7,8 @@ import swaggerUi from "swagger-ui-express";
 import { swaggerDocument } from "./doc.js";
 import { buildSchema } from "graphql";
 import { graphqlHTTP } from "express-graphql";
+import { get } from "http";
+import AccountService from "./services/account.services.js";
 
 const { readFile, writeFile } = fs;
 const { combine, timestamp, label, printf } = winston.format;
@@ -32,10 +34,17 @@ const schema = buildSchema(`
     }
   
   type Query {
-    accounts: [Account]
-    account(id: Int): Account
+    getAccounts: [Account]
+    getAccount(id: Int): Account
   }
 `);
+
+const root = {
+  getAccounts: () => AccountService.getAccounts(),
+  getAccount(args) {
+    return AccountService.getAccount(args.id);
+  },
+};
 
 const app = express();
 app.use(express.json());
@@ -48,7 +57,7 @@ app.use(
   "/graphql",
   graphqlHTTP({
     schema: schema,
-    rootValue: null,
+    rootValue: root,
     graphiql: true,
   })
 );
