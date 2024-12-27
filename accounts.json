@@ -1,5 +1,5 @@
 {
-  "nextId": 21,
+  "nextId": 25,
   "accounts": [
     {
       "id": 1,
@@ -88,6 +88,25 @@
       "id": 20,
       "name": "João Gabriel Oliveira Moura",
       "balance": 16692605
+    },
+    {
+      "id": 21,
+      "name": "Belzebu",
+      "balance": 666
+    },
+    {
+      "id": 22,
+      "name": "Lúcifer"
+    },
+    {
+      "id": 23,
+      "name": "Belzebu",
+      "balance": 666
+    },
+    {
+      "id": 24,
+      "name": "Belzebu",
+      "balance": 666
     }
   ]
 }
