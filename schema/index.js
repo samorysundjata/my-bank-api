@@ -6,9 +6,7 @@ const Schema = new GraphQLSchema({
   query: new GraphQLObjectType({
     name: "RootQueryType",
     fields: {
-      // getAccounts: ///,
-      // getAccount: ///,
-      // getClients: ///,
+      ...AccountQuery,
     },
   }),
   mutation: null,

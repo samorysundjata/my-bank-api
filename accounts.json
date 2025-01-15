@@ -19,25 +19,22 @@
     {
       "id": 4,
       "name": "Maria Valentina Barros",
-      "balance": {
-        "id": 4,
-        "balance": 67450713802
-      }
+      "balance": 67450713802
     },
     {
       "id": 5,
       "name": "João Vitor Castro Barros",
-      "balance": 0
+      "balance": 67450713808
     },
     {
       "id": 6,
       "name": "Luiz Gustavo Teixeira Moreira",
-      "balance": 0
+      "balance": 67450713803
     },
     {
       "id": 7,
       "name": "Luiz Gustavo Freitas Borges",
-      "balance": 0
+      "balance": 67450713807
     },
     {
       "id": 8,
@@ -96,16 +93,17 @@
     },
     {
       "id": 22,
-      "name": "Lúcifer"
+      "name": "Lúcifer",
+	  "balance": 666
     },
     {
       "id": 23,
-      "name": "Belzebu",
+      "name": "Belzebu Jr",
       "balance": 666
     },
     {
       "id": 24,
-      "name": "Belzebu",
+      "name": "Belzebu Filho",
       "balance": 666
     }
   ]

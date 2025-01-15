@@ -5,7 +5,7 @@ import {
   GraphQLFloat,
 } from "graphql";
 
-const Account = new GraphQLInputObjectType({
+const AccountInput = new GraphQLInputObjectType({
   name: "Account",
   fields: () => ({
     id: {
@@ -20,4 +20,4 @@ const Account = new GraphQLInputObjectType({
   }),
 });
 
-export default Account;
+export default AccountInput;
