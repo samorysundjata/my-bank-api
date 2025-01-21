@@ -9,7 +9,10 @@ const Schema = new GraphQLSchema({
       ...AccountQuery,
     },
   }),
-  mutation: null,
+  mutation: new GraphQLObjectType({
+    name: "RootMutation",
+    fields: {},
+  }),
 });
 
 export default Schema;

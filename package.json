@@ -1,7 +1,7 @@
 {
   "name": "my-bank-api",
   "version": "1.0.0",
-  "description": "",
+  "description": "![Node.js Badge](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)\r ![Express.js Badge](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)\r ![VS Code Badge](https://img.shields.io/badge/Made%20with-VS%20Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white)\r ![JavaScript Badge](https://img.shields.io/badge/JavaScript-ES6-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -17,5 +17,6 @@
     "graphql": "^16.9.0",
     "swagger-ui-express": "^5.0.1",
     "winston": "^3.15.0"
-  }
+  },
+  "devDependencies": {}
 }
