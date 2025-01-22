@@ -1,8 +1,7 @@
 import { GraphQLBoolean, GraphQLInt } from "graphql";
 import Account from "../types/Account.js";
-("../types/Account.js");
 import AccountInput from "../types/AccountInput.js";
-import AccountService from "../../services/account.service.js";
+import AccountService from "../../services/account.services.js";
 
 const accountMutation = {
   createAccount: {
