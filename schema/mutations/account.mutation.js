@@ -1,7 +1,8 @@
 import { GraphQLBoolean, GraphQLInt } from "graphql";
 import Account from "../types/Account.js";
 import AccountInput from "../types/AccountInput.js";
-import AccountService from "../../services/account.services.js";
+// import AccountService from "../../services/account.services.js";
+import AccountResolver from "../resolvers/account.resolver.js";
 
 const accountMutation = {
   createAccount: {
@@ -13,7 +14,7 @@ const accountMutation = {
       },
     },
     resolve(_, args) {
-      return AccountService.createAccount(args.account);
+      return AccountResolver.createAccount(args.account);
     },
   },
 
@@ -26,7 +27,7 @@ const accountMutation = {
       },
     },
     resolve(_, args) {
-      return AccountService.deleteAccount(args.id);
+      return AccountResolver.deleteAccount(args.id);
     },
   },
 
@@ -39,7 +40,7 @@ const accountMutation = {
       },
     },
     resolve(_, args) {
-      return AccountService.updateAccount(args.account);
+      return AccountResolver.updateAccount(args.account);
     },
   },
 };
