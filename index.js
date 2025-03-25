@@ -10,6 +10,7 @@ import { graphqlHTTP } from "express-graphql";
 import { get } from "http";
 import AccountService from "./services/account.services.js";
 import Schema from "./schema/index.js";
+import basicAuth from "express-basic-auth";
 
 const { readFile, writeFile } = fs;
 const { combine, timestamp, label, printf } = winston.format;
@@ -71,6 +72,13 @@ app.use(express.json());
 app.use(cors());
 app.use(express.static("public"));
 app.use("/doc", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+
+app.use(
+  basicAuth({
+    users: { admin: "admin" },
+  })
+);
+
 app.use("/account", accountsRouter);
 
 app.use(
