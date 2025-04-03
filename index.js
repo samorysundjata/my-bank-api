@@ -73,13 +73,33 @@ app.use(cors());
 app.use(express.static("public"));
 app.use("/doc", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
+function getRole(user) {
+  // if (user === "admin") return "admin";
+  // if (user === "user") return "user";
+  // return null;
+}
+
+function authorize(...allowed) {
+  return (req, res, next) => {
+    if (req.auth.user) {
+      const role = getRole(req.auth.user);
+    }
+  };
+}
+
 app.use(
   basicAuth({
-    users: { admin: "admin" },
+    // users: { admin: "admin" },
+    authorizer: (username, password) => {
+      const userMatches = basicAuth.safeCompare(username, "admin");
+      const pwdMatches = basicAuth.safeCompare(password, "admin");
+
+      return userMatches && pwdMatches;
+    },
   })
 );
 
-app.use("/account", accountsRouter);
+app.use("/account", authorize("admin", "role"), accountsRouter);
 
 app.use(
   "/graphql",
