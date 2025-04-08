@@ -74,15 +74,24 @@ app.use(express.static("public"));
 app.use("/doc", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 function getRole(user) {
-  // if (user === "admin") return "admin";
-  // if (user === "user") return "user";
-  // return null;
+  if (username === "admin") return "admin";
+  else if (username == "angelo") return "role1";
 }
 
 function authorize(...allowed) {
+  const isAllowed = (role) => allowed.indexOf(role) > -1;
+
   return (req, res, next) => {
     if (req.auth.user) {
       const role = getRole(req.auth.user);
+
+      if (isAllowed(role)) {
+        next();
+      } else {
+        res.status(401).send("Role não permitido!");
+      }
+    } else {
+      res.status(401).send("Usuário não autorizado!");
     }
   };
 }
@@ -94,7 +103,10 @@ app.use(
       const userMatches = basicAuth.safeCompare(username, "admin");
       const pwdMatches = basicAuth.safeCompare(password, "admin");
 
-      return userMatches && pwdMatches;
+      const user2Matches = basicAuth.safeCompare(username, "angelo");
+      const pwd2Matches = basicAuth.safeCompare(password, "123456");
+
+      return (userMatches && pwdMatches) || (user2Matches && pwd2Matches);
     },
   })
 );
